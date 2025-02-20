@@ -10,6 +10,9 @@ The **MultiversX Lite Wallet DApp**, built using [React.js](https://reactjs.org/
 It's a basic implementation of [@multiversx/sdk-dapp](https://www.npmjs.com/package/@multiversx/sdk-dapp), providing the basics for MultiversX authentication and transaction signing.
 See [Lite Wallet dApp](https://lite-wallet-dapp.multiversx.com/) for live demo.
 
+## Tests
+[![Pre-Merge E2E Puppeteer Tests](https://github.com/multiversx/mx-lite-wallet-dapp/actions/workflows/pre-merge-e2e-pptr-tests.yml/badge.svg)](https://github.com/multiversx/mx-lite-wallet-dapp/actions/workflows/pre-merge-e2e-pptr-tests.yml)
+
 ## Requirements
 
 - Node.js version >=18
