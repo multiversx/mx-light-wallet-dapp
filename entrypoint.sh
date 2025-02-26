@@ -24,4 +24,20 @@ for entry in $env_vars_with_defaults; do
   replace_placeholder "$var_name" "$value"
 done
 
+# FIX NGINX 
+sed -i '/location \/ {/,/}/d' /etc/nginx/conf.d/default.conf
+sed -i '/#access_log/a\
+location /assets/ {\
+    root   /usr/share/nginx/html;\
+    index  index.html index.htm;\
+}\
+\
+location / {\
+    rewrite ^ /index.html break;\
+    root   /usr/share/nginx/html;\
+    index  index.html index.htm;\
+}' /etc/nginx/conf.d/default.conf
+cat /etc/nginx/conf.d/default.conf
+
+
 exec nginx -g 'daemon off;'
